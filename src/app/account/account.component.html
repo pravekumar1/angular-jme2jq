@@ -1,10 +1,14 @@
 <div cla="row">
 	<div class="col-sm-12 col-md-8 offset-md-2">
-		<h5>{{account.name}}</h5>
-    <hr />
-    <p>This account is {{account.status}}. </p>
-    <button type="button" class="btn btn-info" (click)="setStatusTo()" >Set to 'Active'</button>
-    <button type="button" class="btn btn-info" (click)="setStatusTo()" >Set to 'Active'</button>
-    <button type="button" class="btn btn-info" (click)="setStatusTo()" >Set to 'Active'</button>
+		<div class="card mb-4">
+			<div class="card-body">
+				<h5 class="card-title">{{account.name}}</h5>
+				<hr />
+				<p class="card-text">This account is {{account.status}}. </p>
+				<button type="button" class="btn mr-2 btn-outline-info" (click)="setStatusTo()" >Set to 'Active'</button>
+				<button type="button" class="btn mr-2 btn-outline-info" (click)="setStatusTo()" >Set to 'Active'</button>
+				<button type="button" class="btn  btn-outline-info" (click)="setStatusTo()" >Set to 'Active'</button>
+			</div>
+		</div>
 	</div>
 </div>
