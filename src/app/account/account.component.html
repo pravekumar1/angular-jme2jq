@@ -4,10 +4,10 @@
 			<div class="card-body">
 				<h5 class="card-title">{{account.name}}</h5>
 				<hr />
-				<p class="card-text">This account is {{account.status}}. </p>
-				<button type="button" class="btn mr-2 btn-outline-info" (click)="setStatusTo('active')" >Set to 'Active'</button>
-				<button type="button" class="btn mr-2 btn-outline-info" (click)="setStatusTo('inactive')" >Set to 'In Active'</button>
-				<button type="button" class="btn  btn-outline-info" (click)="setStatusTo('hidden')" >Set to 'Hidden'</button>
+				<p class="card-text">This account is:  <strong>{{account.status}}</strong>. </p>
+				<button type="button" class="btn mr-2 btn-outline-info" [disabled]="(account.status==='Active')? true: false"  (click)="setStatusTo('Active')" >Set to 'Active'</button>
+				<button type="button" class="btn mr-2 btn-outline-info"  [disabled]="(account.status==='In Active')? true: false" (click)="setStatusTo('In Active')" >Set to 'In Active'</button>
+				<button type="button" class="btn  btn-outline-info" [disabled]="(account.status==='Hidden')? true: false" (click)="setStatusTo('Hidden')" >Set to 'Hidden'</button>
 			</div>
 		</div>
 	</div>
